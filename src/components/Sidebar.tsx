@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Mic, Database, FileText, Settings, Brain, BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MessageCircle, Mic, Database, FileText, Settings, BarChart3, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ActiveModule } from '../App';
 
 interface SidebarProps {
@@ -15,7 +15,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
       id: 'chat' as ActiveModule, 
       icon: MessageCircle, 
       label: 'Conversation', 
-      description: 'Chat intelligent',
+      description: 'Conversation avec l\'IA',
       color: 'from-blue-500 to-indigo-600'
     },
     { 
@@ -49,17 +49,17 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
   ];
 
   return (
-    <div className={`${isCollapsed ? 'w-20' : 'w-72'} bg-white shadow-xl border-r border-gray-100 flex flex-col transition-all duration-300`}>
+    <div className={`${isCollapsed ? 'w-24' : 'w-72'} bg-white shadow-xl border-r border-gray-100 flex flex-col transition-all duration-300`}>
       {/* Header */}
       <div className="p-6 border-b border-gray-100">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Brain className="w-5 h-5 text-white" />
+            <div className="w-10 h-10  flex items-center justify-center ">
+               <img src="/logo-color.png" alt="Logo" className="w-10 h-6" />
             </div>
             {!isCollapsed && (
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Carolina</h1>
+                <h1 className="text-md font-bold text-gray-900">Carolina</h1>
                 <p className="text-sm text-gray-500">Intelligence Artificielle</p>
               </div>
             )}
