@@ -36,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
       id: 'documentation' as ActiveModule, 
       icon: FileText, 
       label: 'Documentation', 
-      description: 'Génération automatique',
+      description: 'Résumé de document',
       color: 'from-orange-500 to-red-600'
     },
     { 

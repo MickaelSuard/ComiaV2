@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Database, FileText, Upload, Settings, Zap, ExternalLink, Plus, Eye, Trash2, RefreshCw, File, Calendar, User } from 'lucide-react';
+import { Search, Database, FileText, Upload, Settings, Zap, ExternalLink, Plus, Eye, Trash2, RefreshCw, File, Calendar } from 'lucide-react';
 
 interface Document {
   id: string;
@@ -243,7 +243,7 @@ const RAGModule: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-bold">Base de Connaissances</h2>
-              <p className="text-blue-100 text-sm">Gestion et recherche intelligente</p>
+              <p className="text-blue-100 text-sm">Gestion et recherche dans la base de connaisance</p>
             </div>
           </div>
           
