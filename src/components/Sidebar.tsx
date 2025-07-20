@@ -55,7 +55,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10  flex items-center justify-center ">
-               <img src="/logo-color.png" alt="Logo" className="w-10 h-6" />
+               <img src={ import.meta.env.BASE_URL + "/logo-color.png"} alt="Logo" className="w-10 h-6" />
             </div>
             {!isCollapsed && (
               <div>
