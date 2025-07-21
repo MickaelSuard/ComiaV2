@@ -11,40 +11,40 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
   const [isCollapsed, setIsCollapsed] = React.useState(false);
 
   const menuItems = [
-    { 
-      id: 'chat' as ActiveModule, 
-      icon: MessageCircle, 
-      label: 'Conversation', 
+    {
+      id: 'chat' as ActiveModule,
+      icon: MessageCircle,
+      label: 'Conversation',
       description: 'Conversation avec l\'IA',
-      color: 'from-blue-500 to-indigo-600'
+      color: 'bg-blue-500'
     },
-    { 
-      id: 'transcription' as ActiveModule, 
-      icon: Mic, 
-      label: 'Transcription', 
+    {
+      id: 'transcription' as ActiveModule,
+      icon: Mic,
+      label: 'Transcription',
       description: 'Audio vers texte',
-      color: 'from-purple-500 to-indigo-600'
+      color: 'bg-blue-500 '
     },
-    { 
-      id: 'rag' as ActiveModule, 
-      icon: Database, 
-      label: 'Base de connaissances', 
+    {
+      id: 'rag' as ActiveModule,
+      icon: Database,
+      label: 'Base de connaissances',
       description: 'Recherche & gestion',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'bg-blue-500 '
     },
-    { 
-      id: 'documentation' as ActiveModule, 
-      icon: FileText, 
-      label: 'Documentation', 
+    {
+      id: 'documentation' as ActiveModule,
+      icon: FileText,
+      label: 'Documentation',
       description: 'Résumé de document',
-      color: 'from-orange-500 to-red-600'
+      color: 'bg-blue-500 '
     },
-    { 
-      id: 'statistics' as ActiveModule, 
-      icon: BarChart3, 
-      label: 'Statistiques', 
+    {
+      id: 'statistics' as ActiveModule,
+      icon: BarChart3,
+      label: 'Statistiques',
       description: 'Analytics & métriques',
-      color: 'from-pink-500 to-rose-600'
+      color: 'bg-blue-500'
     },
   ];
 
@@ -55,11 +55,11 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10  flex items-center justify-center ">
-               <img src={ import.meta.env.BASE_URL + "/logo-color.png"} alt="Logo" className="w-10 h-6" />
+              <img src={import.meta.env.BASE_URL + "/logo-color.png"} alt="Logo" className="w-10 h-6" />
             </div>
             {!isCollapsed && (
               <div>
-                <h1 className="text-md font-bold text-gray-900">Carolina</h1>
+                <h1 className="text-md font-bold text-gray-900">Comue de Lyon</h1>
                 <p className="text-sm text-gray-500">Intelligence Artificielle</p>
               </div>
             )}
@@ -83,55 +83,54 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
         {menuItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeModule === item.id;
-          
+
           return (
             <button
               key={item.id}
               onClick={() => setActiveModule(item.id)}
-              className={`w-full group relative overflow-hidden rounded-xl transition-all duration-300 ${
-                isActive
-                  ? 'bg-gradient-to-r ' + item.color + ' text-white shadow-lg border border-white/20'
-                  : 'text-gray-700 hover:bg-white hover:shadow-md border border-gray-100 hover:border-gray-200 bg-gray-50/50'
-              }`}
+              className={`w-full group relative overflow-hidden rounded-xl transition-colors duration-700 ${isActive
+                ?  + ' text-white shadow-lg border border-white/20'
+                : 'text-gray-700 hover:bg-white hover:shadow-md border border-gray-100 hover:border-gray-200 bg-gray-50/50'
+                }`}
               title={isCollapsed ? item.label : undefined}
             >
-              <div className={`flex items-center ${isCollapsed ? 'justify-center p-3' : 'gap-3 p-4'}`}>
-                <div className={`${isCollapsed ? 'w-8 h-8' : 'w-10 h-10'} rounded-lg flex items-center justify-center transition-all duration-300 ${
-                  isActive 
-                    ? 'bg-white/20 backdrop-blur-sm' 
-                    : 'bg-white shadow-sm group-hover:shadow-md'
-                }`}>
-                  <Icon className={`${isCollapsed ? 'w-4 h-4' : 'w-5 h-5'} transition-all duration-300 ${
-                    isActive ? 'text-white' : 'text-gray-600 group-hover:text-gray-700'
-                  }`} />
+              {/* Fond animé */}
+              <span
+                className={`absolute bottom-0 left-0 w-full h-full origin-bottom transition-transform duration-500 ease-in-out pointer-events-none
+                ${isActive ? 'scale-y-100' : 'scale-y-0'} ${item.color}`}
+                aria-hidden="true"
+              />
+              <div className={`flex  items-center relative z-10 ${isCollapsed ? 'justify-center p-3' : 'gap-3 p-4'}`}>
+                <div className={`${isCollapsed ? 'w-8 h-8' : 'w-10 h-10'} rounded-lg flex items-center justify-center transition-all duration-300 ${isActive
+                  ? 'bg-white/20 backdrop-blur-sm'
+                  : 'bg-white shadow-sm group-hover:shadow-md'
+                  }`}>
+                  <Icon className={`${isCollapsed ? 'w-4 h-4' : 'w-5 h-5'} transition-all duration-300 ${isActive ? 'text-white' : 'text-gray-600 group-hover:text-gray-700'
+                    }`} />
                 </div>
                 {!isCollapsed && (
                   <>
                     <div className="text-left flex-1">
-                      <div className={`font-semibold text-sm transition-all duration-300 ${
-                        isActive ? 'text-white' : 'text-gray-900'
-                      }`}>
+                      <div className={`font-semibold text-sm transition-all duration-300 ${isActive ? 'text-white' : 'text-gray-900'
+                        }`}>
                         {item.label}
                       </div>
-                      <div className={`text-xs mt-0.5 transition-all duration-300 ${
-                        isActive ? 'text-white/80' : 'text-gray-500'
-                      }`}>
+                      <div className={`text-xs mt-0.5 transition-all duration-300 ${isActive ? 'text-white/80' : 'text-gray-500'
+                        }`}>
                         {item.description}
                       </div>
                     </div>
-                    
+
                     {/* Chevron indicator */}
-                    <div className={`transition-all duration-300 ${
-                      isActive ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2 group-hover:opacity-60 group-hover:translate-x-0'
-                    }`}>
-                      <div className={`w-1.5 h-1.5 rounded-full ${
-                        isActive ? 'bg-white' : 'bg-gray-400'
-                      }`} />
+                    <div className={`transition-all duration-300 ${isActive ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-2 group-hover:opacity-60 group-hover:translate-x-0'
+                      }`}>
+                      <div className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-white' : 'bg-gray-400'
+                        }`} />
                     </div>
                   </>
                 )}
               </div>
-              
+
               {/* Subtle glow effect for active state */}
               {isActive && (
                 <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-50 rounded-xl" />
@@ -143,7 +142,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeModule, setActiveModule }) => {
 
       {/* Footer */}
       <div className="p-4 border-t border-gray-100">
-        <button 
+        <button
           className={`w-full flex items-center ${isCollapsed ? 'justify-center p-3' : 'gap-3 p-3'} text-gray-700 hover:bg-white hover:text-gray-900 rounded-xl transition-all duration-300 hover:shadow-md group border border-gray-100 hover:border-gray-200 bg-gray-50/50`}
           title={isCollapsed ? 'Paramètres' : undefined}
         >

@@ -68,7 +68,7 @@ const StatisticsModule: React.FC = () => {
       change: '+8%',
       trend: 'up',
       icon: Users,
-      color: 'from-pink-500 to-rose-600'
+      color: 'from-blue-500 to-blue-600'
     },
     {
       title: 'Temps de réponse',
@@ -165,7 +165,7 @@ const StatisticsModule: React.FC = () => {
   return (
     <div className="flex flex-col h-screen bg-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-pink-500 to-rose-600 text-white p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
@@ -173,7 +173,7 @@ const StatisticsModule: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-bold">Statistiques & Analytics</h2>
-              <p className="text-pink-100 text-sm">Analyse des performances et de l'utilisation</p>
+              <p className="text-blue-100 text-sm">Analyse des performances et de l'utilisation</p>
             </div>
           </div>
           
@@ -236,7 +236,7 @@ const StatisticsModule: React.FC = () => {
                     onClick={() => setSelectedMetric('usage')}
                     className={`px-3 py-1 rounded-lg text-sm transition-all ${
                       selectedMetric === 'usage' 
-                        ? 'bg-pink-100 text-pink-600' 
+                        ? 'bg-blue-100 text-blue-600' 
                         : 'text-gray-600 hover:bg-gray-100'
                     }`}
                   >
@@ -246,7 +246,7 @@ const StatisticsModule: React.FC = () => {
                     onClick={() => setSelectedMetric('performance')}
                     className={`px-3 py-1 rounded-lg text-sm transition-all ${
                       selectedMetric === 'performance' 
-                        ? 'bg-pink-100 text-pink-600' 
+                        ? 'bg-blue-100 text-blue-600' 
                         : 'text-gray-600 hover:bg-gray-100'
                     }`}
                   >
@@ -316,7 +316,7 @@ const StatisticsModule: React.FC = () => {
           <div className="bg-white rounded-xl border border-gray-200 p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Activité récente</h3>
-              <button className="text-pink-600 hover:text-pink-700 text-sm font-medium flex items-center gap-1">
+              <button className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1">
                 <Eye className="w-4 h-4" />
                 Voir tout
               </button>

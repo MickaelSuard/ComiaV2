@@ -30,7 +30,7 @@ Participants présents :
 - Sophie Laurent (Designer UX)
 - Pierre Durand (Analyste)
 
-[00:00] Marie : Bonjour à tous, merci d'être présents pour cette réunion d'équipe. Nous allons faire le point sur l'avancement du projet Carolina.
+[00:00] Marie : Bonjour à tous, merci d'être présents pour cette réunion d'équipe. Nous allons faire le point sur l'avancement du projet Comue de Lyon.
 
 [02:15] Jean : L'architecture backend est maintenant finalisée. Nous avons implémenté l'API REST avec une authentification JWT sécurisée.
 
@@ -83,7 +83,7 @@ Participants présents :
 - **Décisions prises** : 3 actions concrètes
 
 ---
-*Résumé généré automatiquement par Carolina IA*`,
+*Résumé généré automatiquement par Comue de Lyon IA*`,
       summaryWordCount: 245
     },
     {
@@ -93,9 +93,9 @@ Participants présents :
       status: 'completed',
       fileSize: '12.8 MB',
       uploadedAt: new Date(Date.now() - 172800000),
-      transcription: `Présentation client - Projet Carolina
+      transcription: `Présentation client - Projet Comue de Lyon
 
-Bonjour Monsieur Leclerc, merci de nous recevoir aujourd'hui. Je vais vous présenter notre solution Carolina, une plateforme d'intelligence artificielle complète.
+Bonjour Monsieur Leclerc, merci de nous recevoir aujourd'hui. Je vais vous présenter notre solution Comue de Lyon, une plateforme d'intelligence artificielle complète.
 
 Notre solution comprend quatre modules principaux :
 
@@ -114,7 +114,7 @@ Nous proposons une période d'essai de 30 jours pour que vous puissiez évaluer 
       summary: `## Résumé de Présentation Client
 
 ### 🎯 Objectif
-Présentation de la solution Carolina à Monsieur Leclerc
+Présentation de la solution Comue de Lyon à Monsieur Leclerc
 
 ### 📦 Modules Présentés
 1. Assistant IA conversationnel
@@ -133,7 +133,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
 - Évaluation en environnement réel
 
 ---
-*Résumé généré automatiquement par Carolina IA*`,
+*Résumé généré automatiquement par Comue de Lyon IA*`,
       summaryWordCount: 89
     }
   ]);
@@ -208,7 +208,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
 - **Temps de traitement** : ${Math.floor(Math.random() * 30) + 10} secondes
 
 ---
-*Résumé généré automatiquement par Carolina IA*`;
+*Résumé généré automatiquement par Comue de Lyon IA*`;
 
         setFiles(prev => prev.map(f =>
           f.id === file.id
@@ -257,11 +257,11 @@ Présentation de la solution Carolina à Monsieur Leclerc
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
-        return <CheckCircle className="w-4 h-4 text-purple-500" />;
+        return <CheckCircle className="w-4 h-4 text-blue-500" />;
       case 'error':
         return <AlertCircle className="w-4 h-4 text-red-500" />;
       default:
-        return <div className="w-4 h-4 border-2 border-purple-500 border-t-transparent rounded-full animate-spin" />;
+        return <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />;
     }
   };
 
@@ -273,14 +273,14 @@ Présentation de la solution Carolina à Monsieur Leclerc
 
     <div className="flex flex-col h-screen bg-white">
       {/* Header - Full Width */}
-      <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 shadow-lg">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
             <Mic className="w-5 h-5" />
           </div>
           <div>
             <h2 className="text-xl font-bold">Transcription</h2>
-            <p className="text-purple-100 text-sm">
+            <p className="text-blue-100 text-sm">
               Audio vers texte
             </p>
           </div>
@@ -298,7 +298,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
             {/* Upload Zone */}
             <div
               className={`relative border-2 border-dashed rounded-lg p-6 text-center transition-all duration-300 mb-4 ${dragActive
-                ? 'border-purple-500 bg-purple-50 scale-105'
+                ? 'border-blue-500 bg-blue-50 scale-105'
                 : 'border-gray-300 hover:border-gray-400 hover:bg-gray-50'
                 }`}
               onDragEnter={handleDrag}
@@ -327,7 +327,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Rechercher..."
-                className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
+                className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
               />
             </div>
           </div>
@@ -344,17 +344,17 @@ Présentation de la solution Carolina à Monsieur Leclerc
                 <div
                   key={file.id}
                   className={`group p-4 rounded-xl cursor-pointer transition-all duration-200 ${selectedFile?.id === file.id
-                    ? 'border border-purple-300 bg-purple-50 shadow-lg'
+                    ? 'border border-blue-300 bg-blue-50 shadow-lg'
                     : 'border border-gray-200 hover:border-gray-300 hover:shadow-md bg-white'
                     }`}
                   onClick={() => setSelectedFile(file)}
                 >
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
                       {file.filename.includes('.mp4') || file.filename.includes('.mov') || file.filename.includes('.avi') ? (
-                        <FileVideo className="w-4 h-4 text-purple-600" />
+                        <FileVideo className="w-4 h-4 text-blue-600" />
                       ) : (
-                        <FileAudio className="w-4 h-4 text-purple-600" />
+                        <FileAudio className="w-4 h-4 text-blue-600" />
                       )}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -380,8 +380,8 @@ Présentation de la solution Carolina à Monsieur Leclerc
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       {getStatusIcon(file.status)}
-                      <span className={`text-xs font-medium ${file.status === 'completed' ? 'text-purple-600' :
-                        file.status === 'processing' ? 'text-purple-600' : 'text-red-600'
+                      <span className={`text-xs font-medium ${file.status === 'completed' ? 'text-blue-600' :
+                        file.status === 'processing' ? 'text-blue-600' : 'text-red-600'
                         }`}>
                         {file.status === 'completed' ? 'Terminé' :
                           file.status === 'processing' ? 'En cours' : 'Erreur'}
@@ -395,7 +395,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                   </div>
 
                   {file.status === 'completed' && file.summaryWordCount && (
-                    <div className="mt-2 text-xs text-purple-600 bg-purple-100 rounded-lg p-2">
+                    <div className="mt-2 text-xs text-blue-600 bg-blue-100 rounded-lg p-2">
                       <span className="ml-2">Résumé: {file.summaryWordCount} mots</span>
                     </div>
                   )}
@@ -428,7 +428,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                   <button
                     onClick={() => setActiveTab('transcription')}
                     className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${activeTab === 'transcription'
-                      ? 'bg-purple-600 text-white shadow-lg'
+                      ? 'bg-blue-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                   >
@@ -438,7 +438,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                   <button
                     onClick={() => setActiveTab('summary')}
                     className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${activeTab === 'summary'
-                      ? 'bg-purple-600 text-white shadow-lg'
+                      ? 'bg-blue-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                   >
@@ -458,7 +458,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                           {selectedFile.transcription && (
                             <button
                               onClick={() => downloadTranscription(selectedFile.transcription!, selectedFile.filename)}
-                              className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                             >
                               <Download className="w-4 h-4" />
                               Télécharger
@@ -476,7 +476,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                           </div>
                         ) : selectedFile.status === 'processing' ? (
                           <div className="text-center py-12">
-                            <div className="animate-spin w-8 h-8 border-2 border-purple-600 border-t-transparent rounded-full mx-auto mb-4"></div>
+                            <div className="animate-spin w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"></div>
                             <p className="text-gray-600">Transcription en cours...</p>
                           </div>
                         ) : (
@@ -494,13 +494,13 @@ Présentation de la solution Carolina à Monsieur Leclerc
                       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
                         <div className="flex items-center justify-between mb-6">
                           <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-                            <Sparkles className="w-5 h-5 text-purple-600" />
+                            <Sparkles className="w-5 h-5 text-blue-600" />
                             Résumé Automatique
                           </h2>
                           {selectedFile.summary && (
                             <button
                               onClick={() => downloadSummary(selectedFile.summary!, selectedFile.filename)}
-                              className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                             >
                               <Download className="w-4 h-4" />
                               Télécharger PDF
@@ -515,7 +515,7 @@ Présentation de la solution Carolina à Monsieur Leclerc
                             </div>
 
                             <div className="mt-8 pt-6 border-t border-gray-200 flex items-center justify-between text-sm text-gray-500">
-                              <span>Document généré par Carolina IA</span>
+                              <span>Document généré par Comue de Lyon IA</span>
                               <span>Généré le {selectedFile.uploadedAt.toLocaleDateString()}</span>
                             </div>
                           </div>

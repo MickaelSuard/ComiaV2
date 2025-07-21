@@ -186,7 +186,7 @@ const ChatInterface: React.FC = () => {
   return (
     <div className="flex flex-col h-screen bg-white">
       {/* Header - Full Width */}
-      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 shadow-lg">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
             <Sparkles className="w-5 h-5" />
@@ -437,7 +437,7 @@ const ChatInterface: React.FC = () => {
                   <button
                     type="submit"
                     disabled={!inputValue.trim() || isLoading}
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed px-6 py-4 rounded-2xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none"
+                    className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed px-6 py-4 rounded-2xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none"
                   >
                     <Send className="w-5 h-5 text-white" />
                   </button>

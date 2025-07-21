@@ -115,7 +115,7 @@ export default function DocumentationModule() {
 
     <div className="flex flex-col h-screen bg-white">
       {/* Header - Full Width */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 shadow-lg">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
             <FileText className="w-5 h-5" />
@@ -159,12 +159,12 @@ export default function DocumentationModule() {
                 key={doc.id}
                 onClick={() => setSelectedDoc(doc)}
                 className={`p-4 rounded-lg border cursor-pointer  transition-all ${selectedDoc?.id === doc.id
-                    ? 'border-orange-200 bg-orange-50'
+                    ? 'border-blue-200 bg-blue-50'
                     : 'border-gray-200 hover:border-gray-300 hover:shadow-md bg-white '
                   }`}
               >
                 <div className="flex items-start gap-3">
-                  <FileText className="w-5 h-5 text-red-500 mt-1 flex-shrink-0" />
+                  <FileText className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-medium text-gray-800 text-sm truncate">{doc.name}</h3>
                     <div className="flex items-center gap-2 mt-1 text-xs text-gray-500">
@@ -173,8 +173,8 @@ export default function DocumentationModule() {
                       <span>{doc.pages} pages</span>
                     </div>
                     <div className="flex items-center gap-2 mt-2">
-                      <div className={`w-2 h-2 rounded-full ${doc.status === 'complété' ? 'bg-orange-400' :
-                          doc.status === 'en cours' ? 'bg-yellow-400' : 'bg-red-400'
+                      <div className={`w-2 h-2 rounded-full ${doc.status === 'complété' ? 'bg-blue-400' :
+                          doc.status === 'en cours' ? 'bg-yellow-400' : 'bg-blue-400'
                         }`} />
                       <span className="text-xs text-gray-500 capitalize">{doc.status}</span>
                     </div>
@@ -205,7 +205,7 @@ export default function DocumentationModule() {
                   <button
                     onClick={() => setActiveTab('summary')}
                     className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${activeTab === 'summary'
-                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
+                        ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                   >
@@ -215,7 +215,7 @@ export default function DocumentationModule() {
                   <button
                     onClick={() => setActiveTab('chat')}
                     className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${activeTab === 'chat'
-                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
+                        ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg'
                         : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                   >
@@ -233,7 +233,7 @@ export default function DocumentationModule() {
                       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
                         <div className="flex items-center justify-between mb-6">
                           <h2 className="text-xl font-semibold text-gray-800">Résumé du Document</h2>
-                          <button className="flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
+                          <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                             <Download className="w-4 h-4" />
                             Télécharger
                           </button>
@@ -335,7 +335,7 @@ export default function DocumentationModule() {
                             className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                           >
                             <div className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${message.type === 'user'
-                                ? 'bg-orange-600 text-white'
+                                ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800'
                               }`}>
                               <p className="text-sm">{message.message}</p>
@@ -358,11 +358,11 @@ export default function DocumentationModule() {
                             onChange={(e) => setChatInput(e.target.value)}
                             onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
                             placeholder="Posez votre question..."
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                           />
                           <button
                             onClick={sendMessage}
-                            className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
+                            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                           >
                             Envoyer
                           </button>

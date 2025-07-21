@@ -235,7 +235,7 @@ const RAGModule: React.FC = () => {
   return (
     <div className="flex flex-col h-screen bg-white">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-6 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
